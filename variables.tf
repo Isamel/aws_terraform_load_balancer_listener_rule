@@ -13,37 +13,37 @@ variable "alb_listener_rule_listener_arn" {
     description = "alb listener rule listener arn."
 }
 
-variable "alb_internal" {
-    type        = bool
-    description = "alb internal."
-}
-
-variable "alb_idle_timeout" {
-    type        = number
-    description = "alb idle timeout."
-}
-
-variable "alb_idle_load_balancer_type" {
+variable "alb_listener_rule_condition_field" {
     type        = string
-    description = "alb idle load balancer type."
+    description = "alb listener rule condition field."
 }
 
-variable "alb_idle_security_groups" {
+variable "alb_listener_rule_condition_values" {
     type        = list(string)
-    description = "alb idle security groups."
+    description = "alb listener rule condition values."
 }
 
-variable "alb_idle_subnets" {
-    type        = list(string)
-    description = "alb idle subnets."
+variable "alb_listener_rule_action_type" {
+    type        = string
+    description = "alb listener rule action type."
 }
 
-variable "alb_idle_enable_deletion_protection" {
-    type        = bool
-    description = "alb idle enable deletion protection."
+variable "alb_listener_rule_action_redirect_port" {
+    type        = number
+    description = "alb listener rule action redirect port."
 }
 
-variable "alb_idle_enable_cross_zone_load_balancing" {
-    type        = bool
-    description = "alb idle enable cross zone load balancing."
+variable "alb_listener_rule_action_redirect_protocol" {
+    type        = string
+    description = "alb listener rule action redirect protocol."
+}
+
+variable "alb_listener_rule_action_redirect_status_code" {
+    type        = string
+    description = "alb listener rule action redirect status code."
+}
+
+variable "alb_listener_rule_action_target_group_arn" {
+    type        = string
+    description = "alb listener rule action target group arn."
 }

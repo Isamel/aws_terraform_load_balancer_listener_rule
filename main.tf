@@ -9,8 +9,8 @@ resource "aws_lb_listener_rule" "alb_listener_rule_rule_terraform" {
     depends_on           = [null_resource.depends_on]
     listener_arn         = var.alb_listener_rule_listener_arn
     condition {
-        field            = var.alb_listener_rule_condition
-        values           = var.alb_listener_rule_condition
+        field            = var.alb_listener_rule_condition_field
+        values           = var.alb_listener_rule_condition_values
     }
     action {
         type             = var.alb_listener_rule_action_type
